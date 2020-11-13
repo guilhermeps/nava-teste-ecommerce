@@ -7,9 +7,9 @@ Desafio técnico do processo seletivo da Nava. Contempla o desenvolvimento de AP
 
 Registrar venda: Recebe os dados do vendedor + itens vendidos. Registra venda com status "Aguardando pagamento". 
 
-            Buscar venda: Busca pelo Id da venda.
+Buscar venda: Busca pelo Id da venda.
 
-            Atualizar venda: Permite que seja atualizado o status da venda (possíveis status: “Pagamento aprovado” | “Enviado para transportadora” | “Entregue” | “Cancelada”)
+Atualizar venda: Permite que seja atualizado o status da venda (possíveis status: “Pagamento aprovado” | “Enviado para transportadora” | “Entregue” | “Cancelada”)
 
 ·  Uma venda contém informação sobre o vendedor que a efetivou, data, identificador do pedido e os itens que foram vendidos.
 
