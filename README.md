@@ -68,7 +68,7 @@ curl -X GET \
 ```
 
 * Atualizar o status da venda
-
+```
 curl -X PATCH \
   http://{host da api}/api/vendas/{idVenda} \
   -H 'cache-control: no-cache' \
