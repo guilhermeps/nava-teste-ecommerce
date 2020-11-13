@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Enums.NET" Version="3.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Nava.Processo.Seletivo.Business\Nava.Processo.Seletivo.Negocio.csproj" />
+    <ProjectReference Include="..\Nava.Processo.Seletivo.Domain\Nava.Processo.Seletivo.Dominio.csproj" />
+    <ProjectReference Include="..\Nava.Processo.Seletivo.Infrastructure\Nava.Processo.Seletivo.Infraestrutura.csproj" />
+  </ItemGroup>
+
+
+</Project>
