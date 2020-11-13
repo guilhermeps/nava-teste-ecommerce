@@ -37,3 +37,45 @@ De: “Enviado para Transportador“. Para: Entregue
 Para oferecer uma melhor amostragem das minhas habilidades técnicas implementei o padrão de projeto *Ports and Adapters* aplicando este padrão nos princípios do *Clean Architecture*. O código foi desenvolvido observando os princípios do *SOLID*.
 
 No que tange aos testes automatizados busquei passar pelas camadas de Unidade, Componentes e Integração. Como se trata de uma amostragem não me preocupei em cobrir a API em 100%, muito embora o faria em uma situação real. Vale ressaltar também que várias validações não foram feitas nas entidades, pois traria mais complexidade para este desafio, e entendo que não é esse o objetivo principal nesta fase.
+
+# Payloads
+Para executar os endpoints temos os seguintes payloads de exemplo:
+
+* Criar uma venda
+```
+curl -X POST \
+  http://{host da api}/api/vendas \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 81cacadf-f405-649d-332d-3046035c99de' \
+  -d '{
+	"cpf": "09189796683",
+	"nome": "Guilherme",
+	"email": "guilherme@teste.com",
+	"telefone": "31994237405",
+	"itens": ["geladeira", "fogão"]
+}
+'
+```
+
+* Buscar uma venda
+O `idVenda` pode ser obtido no header location da resposta do enpoint de criação de venda.
+```
+curl -X GET \
+  http://{host da api}/api/vendas/{idVenda} \
+  -H 'cache-control: no-cache' \
+  -H 'postman-token: cc14e127-b8bb-d20b-7475-6d96ae4cb249'
+```
+
+* Atualizar o status da venda
+
+curl -X PATCH \
+  http://{host da api}/api/vendas/{idVenda} \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: 308ea461-d2fe-8255-4097-8020abee69ce' \
+  -d '{
+	"status": "pagamento aprovado"
+}'
+
+```
